@@ -1,69 +1,47 @@
-PHP CRUD Application with MySQL and Chart.js Visualization
-Overview:
-This project is a PHP-based CRUD (Create, Read, Update, Delete) application developed to manage products using MySQL as the backend database.
-It includes a clean and user-friendly interface built with Bootstrap and a dynamic bar chart using Chart.js to visualize category-wise product data.
-This application was created as part of a technical assignment to demonstrate PHP, database handling with PDO, and basic data visualization skills.
+# PHP MySQL CRUD Application with MYSQL & Chart.js
 
-Features
-Create new products
-View products in a table
-Update existing product details
-Delete products
-Category-wise product count visualization using a bar chart
-Responsive UI using Bootstrap
+## Project Overview
+This project is a full-stack CRUD (Create, Read, Update, Delete) application developed using PHP, MySQL, Bootstrap, and Chart.js.  
+It allows users to manage products efficiently and visualize data using a dynamic bar chart.
 
-Technologies Used
-PHP
-MySQL
-PDO (PHP Data Objects)
-HTML, CSS
-Bootstrap
-JavaScript
-Chart.js
+This application was created as part of a technical assignment to demonstrate PHP backend development, database handling, and basic data visualization skills.
 
-Project Structure
-crud-app/
-│
-├── config/
-│   └── db.php
-│
-├── public/
-│   ├── assets/
-│   │   └── chart.js
-│   │
-│   ├── index.php
-│   ├── create.php
-│   ├── update.php
-│   ├── delete.php
-│   └── chart-data.php
-│
-├── screenshots/
-│   └── (screenshots and demo video links)
-│
-└── README.md
+## Tech Stack
+- Frontend: HTML, CSS, Bootstrap
+- Backend: PHP
+- Database: MySQL (phpMyAdmin)
+- Visualization: Chart.js
 
-Database Structure
+## Features
+- Create, read, update, and delete products
+- Auto-increment product ID
+- Input validation and basic error handling
+- Responsive UI using Bootstrap
+- Dynamic bar chart based on product categories
 
-Database Name: crud_app
-Table Name: products
+## Chart Functionality
+- Displays the number of products per category
+- Automatically updates when CRUD operations are performed
+- The bar chart shows total number of products per category
+- Categories are normalized to avoid duplicates (case and spacing issues)
+- Data is fetched from chart-data.php in JSON format
+- Chart updates automatically when any CRUD operation is performed
 
-CREATE DATABASE IF NOT EXISTS crud_app;
-USE crud_app;
+## Example:
+- Accessories: 2 products → 1 bar
+- Office: 1 product → 1 bar
 
-CREATE TABLE IF NOT EXISTS products (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    price DECIMAL(10,2) NOT NULL,
-    category VARCHAR(50) NOT NULL
-);
+## How to Run
+1. Install XAMPP
+2. Start Apache and MySQL
+3. Import the database using phpMyAdmin
+4. Place the project folder inside `htdocs`
+5. Open a browser and visit:
+   http://localhost/crud-app/public/index.php
 
-How the Bar Chart Works
-
-The bar chart shows total number of products per category
-Categories are normalized to avoid duplicates (case and spacing issues)
-Data is fetched from chart-data.php in JSON format
-Chart updates automatically when any CRUD operation is performed
-
-Example:
-Accessories: 2 products → 1 bar
-Office: 1 product → 1 bar
+## Screenshots
+![Dashboard](screenshots/dashboard-overview.png)
+![Add Product](screenshots/add-product.png)
+![Update Product](screenshots/dashboard.png)
+![Category Chart](screenshots/chart.png)
+![Product Table](screenshots/edit-product.png)
