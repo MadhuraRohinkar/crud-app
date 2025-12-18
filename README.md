@@ -38,7 +38,7 @@ crud-app/
 │   └── chart-data.php
 │
 ├── screenshots/
-│   └── (screenshots and demo video links)
+│   └── (screenshots)
 │
 └── README.md
 
