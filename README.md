@@ -42,6 +42,18 @@ This application was created as part of a technical assignment to demonstrate PH
 ## Screenshots
 ![Dashboard](screenshots/dashboard-overview.png)
 ![Add Product](screenshots/add-product.png)
-![Update Product](screenshots/dashboard.png)
+![Dashboard](screenshots/dashboard.png)
 ![Category Chart](screenshots/chart.png)
 ![Product Table](screenshots/edit-product.png)
+
+## How the Bar Chart Works
+
+- The bar chart shows total number of products per category
+- Categories are normalized to avoid duplicates (case and spacing issues)
+- Data is fetched from chart-data.php in JSON format
+- Chart updates automatically when any CRUD operation is performed
+
+## Example:
+- Accessories: 2 products → 1 bar
+- Office: 1 product → 1 bar
+
